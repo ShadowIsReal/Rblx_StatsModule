@@ -80,7 +80,7 @@ function module:AddHiddenStat(Player : Player, StatName : string, StatValue) -- 
 	warn("Hiddenstats was not found!")
 end
 
-function module:RemoveStat(Player : Player, StatName : string) -- function to remove a stat from leaderstats
+function module:RemoveStat(Player : Player, StatName : string) -- function to remove a stat from leaderstats or hiddenstats
 	local Leaderstats = Player:FindFirstChild("leaderstats")
 	local Hiddenstats = Player:FindFirstChild("hiddenstats")
 	
@@ -99,7 +99,7 @@ function module:RemoveStat(Player : Player, StatName : string) -- function to re
 	warn("Leaderstats and hiddenstats were not found!")
 end
 	
-function module:GetStatValue(Player : Player, StatName : string) -- function to retrieve a stat value from a stat in leaderstats
+function module:GetStatValue(Player : Player, StatName : string) -- function to retrieve a stat value from a stat in leaderstats or hiddenstats
 	local Leaderstats = Player:FindFirstChild("leaderstats")
 	local Hiddenstats = Player:FindFirstChild("hiddenstats")
 	
@@ -117,7 +117,7 @@ function module:GetStatValue(Player : Player, StatName : string) -- function to 
 	warn("Leaderstats and hiddenstats were not found!")
 end
 
-function module:SetStatValue(Player : Player, StatName : string, NewValue : any) -- function to set the value of a stat in leaderstats
+function module:SetStatValue(Player : Player, StatName : string, NewValue : any) -- function to set the value of a stat in leaderstats or hiddenstats
 	local Leaderstats = Player:FindFirstChild("leaderstats")
 	local Hiddenstats = Player:FindFirstChild("hiddenstats")
 
@@ -136,7 +136,7 @@ function module:SetStatValue(Player : Player, StatName : string, NewValue : any)
 	warn("Leaderstats and hiddenstats were not found!")
 end
 
-function module:GetAllStats(Player : Player) -- function to retrieve all stats from leaderstats and convert them to a table
+function module:GetAllStats(Player : Player) -- function to retrieve all stats from leaderstats and hiddentstats convert them to a dictionary
 	local Leaderstats = Player:FindFirstChild("leaderstats")
 	local Hiddenstats = Player:FindFirstChild("hiddenstats")
 	local Stats = {}
